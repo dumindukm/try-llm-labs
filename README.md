@@ -19,7 +19,7 @@ The project uses [UV](https://github.com/astral-sh/uv) as the package manager fo
 3. Use UV to install dependencies:
 
     ```bash
-    uv pip install -r requirements.txt
+    uv sync
     ```
 4. Set below enviorment variables. you can create .env file
     - AZURE_OPENAI_API_KEY

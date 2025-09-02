@@ -39,9 +39,9 @@ class AzureOpenAIChat:
             ]
         }
 
-    def update_system_prompt(self, prompt):
+    def set_assistance_prompt(self, prompt):
         self.chat_prompt.append( {
-            "role": "system",
+            "role": "assistant",
             "content": [
                 {
                     "type": "text",
@@ -70,7 +70,7 @@ class AzureOpenAIChat:
         )
         # print(completion.to_json())
         print(completion.choices[0].message.content)
-        self.update_system_prompt(completion.choices[0].message.content)
+        self.set_assistance_prompt(completion.choices[0].message.content)
         print(completion.choices[0].message.content)
 
 
